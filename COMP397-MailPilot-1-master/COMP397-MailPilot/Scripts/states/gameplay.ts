@@ -98,6 +98,11 @@ module states {
 
             this.scoreboard.update();
 
+            if (this.scoreboard.score == 500) {
+                currentState = constants.LVL2_STATE;
+                stateChanged = true;
+            }
+
             if (this.scoreboard.lives < 1) {
                 this.scoreboard.active = false;
                 createjs.Sound.stop();
@@ -110,6 +115,7 @@ module states {
                 currentState = constants.GAME_OVER_STATE;
                 stateChanged = true;
             }
+
 
             stage.update(); // Refreshes our stage
 

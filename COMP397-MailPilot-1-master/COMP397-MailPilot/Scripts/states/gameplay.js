@@ -68,6 +68,10 @@ var states;
             }
             this.checkCollision(this.treasure);
             this.scoreboard.update();
+            if (this.scoreboard.score == 500) {
+                currentState = constants.LVL2_STATE;
+                stateChanged = true;
+            }
             if (this.scoreboard.lives < 1) {
                 this.scoreboard.active = false;
                 createjs.Sound.stop();

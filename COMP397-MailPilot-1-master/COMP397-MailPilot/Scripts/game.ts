@@ -42,7 +42,7 @@ var menu: states.Menu;
 var manifest = [
     { id: "shark", src: "assets/images/shark.png" },
     { id: "treasure", src: "assets/images/treasure.png" },
-    { id: "ocean", src: "assets/images/ocean.gif" },
+    { id: "ocean", src: "assets/images/lvl2Ocean.gif" },
     { id: "submarine", src: "assets/images/submarine.png" },
     { id: "playButton", src: "assets/images/playButton.png" },
     { id: "tryAgainButton", src: "assets/images/tryAgainButton.png" },
