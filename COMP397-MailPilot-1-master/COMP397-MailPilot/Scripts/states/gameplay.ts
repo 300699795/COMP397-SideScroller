@@ -1,9 +1,9 @@
 ﻿/// <reference path="../constants.ts" />
 /// <reference path="../objects/gameobject.ts" />
 /// <reference path="../objects/treasure.ts" />
-/// <reference path="../objects/ocean.ts" />
-/// <reference path="../objects/submarine.ts" />
-/// <reference path="../objects/shark.ts" />
+/// <reference path="../objects/sky.ts" />
+/// <reference path="../objects/flappyBird.ts" />
+/// <reference path="../objects/pipe.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 /// <reference path="../objects/label.ts" />
 
@@ -13,10 +13,10 @@ module states {
         // Game Objects 
         public game: createjs.Container;
         public scoreboard: objects.ScoreBoard;
-        public submarine: objects.Submarine;
+        public flappyBird: objects.FlappyBird;
         public treasure: objects.Treasure;
-        public shark: objects.Shark[] = [];
-        public ocean: objects.Ocean;
+        public pipe: objects.Pipe[] = [];
+        public sky: objects.Sky;
 
         constructor() {
             // Instantiate Game Container
@@ -24,8 +24,8 @@ module states {
 
 
             //Ocean object
-            this.ocean = new objects.Ocean();
-            this.game.addChild(this.ocean);
+            this.sky = new objects.Sky();
+            this.game.addChild(this.sky);
 
             //Treasure object
             this.treasure = new objects.Treasure();
@@ -33,13 +33,13 @@ module states {
 
 
             //Submarine object
-            this.submarine = new objects.Submarine();
-            this.game.addChild(this.submarine);
+            this.flappyBird = new objects.FlappyBird();
+            this.game.addChild(this.flappyBird);
 
             //Shark object
-            for (var shark = 1; shark >= 0; shark--) {
-                this.shark[shark] = new objects.Shark();
-                this.game.addChild(this.shark[shark]);
+            for (var pipe = 1; pipe >= 0; pipe--) {
+                this.pipe[pipe] = new objects.Pipe();
+                this.game.addChild(this.pipe[pipe]);
             }
 
 
@@ -59,13 +59,13 @@ module states {
         // CHECK COLLISION METHOD
         public checkCollision(collider: objects.GameObject) {
             if (this.scoreboard.active) {
-                var planePosition: createjs.Point = new createjs.Point(this.submarine.x, this.submarine.y);
+                var planePosition: createjs.Point = new createjs.Point(this.flappyBird.x, this.flappyBird.y);
                 var objectPosition: createjs.Point = new createjs.Point(collider.x, collider.y);
                 var theDistance = this.distance(planePosition, objectPosition);
-                if (theDistance < ((this.submarine.height * 0.5) + (collider.height * 0.5))) {
+                if (theDistance < ((this.flappyBird.width * 0.5) + (collider.width * 0.5))) {
                     if (collider.isColliding != true) {
                         createjs.Sound.play(collider.sound);
-                        if (collider.name == "shark") {
+                        if (collider.name == "pipe") {
                             this.scoreboard.lives--;
                         }
                         if (collider.name == "treasure") {
@@ -81,16 +81,16 @@ module states {
 
         public update() {
 
-            this.ocean.update();
+            this.sky.update();
 
             this.treasure.update();
 
-            this.submarine.update();
+            this.flappyBird.update();
 
-            for (var shark = 1; shark >= 0; shark--) {
-                this.shark[shark].update();
+            for (var pipe = 1; pipe >= 0; pipe--) {
+                this.pipe[pipe].update();
 
-                this.checkCollision(this.shark[shark]);
+                this.checkCollision(this.pipe[pipe]);
             }
 
             this.checkCollision(this.treasure);

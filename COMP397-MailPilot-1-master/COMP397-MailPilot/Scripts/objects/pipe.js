@@ -7,32 +7,32 @@ var __extends = this.__extends || function (d, b) {
 var objects;
 (function (objects) {
     // SHARK CLASS
-    var Shark = (function (_super) {
-        __extends(Shark, _super);
+    var Pipe = (function (_super) {
+        __extends(Pipe, _super);
         // CONSTRUCTOR
-        function Shark() {
-            _super.call(this, "shark");
+        function Pipe() {
+            _super.call(this, "pipe");
             this.sound = "hit";
             this._dx = 10;
             this.reset();
         }
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
-        Shark.prototype.update = function () {
+        Pipe.prototype.update = function () {
             this.x -= this._dx;
             this._checkBounds();
         };
-        Shark.prototype.reset = function () {
+        Pipe.prototype.reset = function () {
             this.y = Math.floor(Math.random() * 120);
             this.x = this.width * 12;
         };
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++
-        Shark.prototype._checkBounds = function () {
+        Pipe.prototype._checkBounds = function () {
             if (-this.x >= (640 + this.width)) {
                 this.reset();
             }
         };
-        return Shark;
+        return Pipe;
     })(objects.GameObject);
-    objects.Shark = Shark;
+    objects.Pipe = Pipe;
 })(objects || (objects = {}));
-//# sourceMappingURL=shark.js.map
+//# sourceMappingURL=pipe.js.map

@@ -27,7 +27,7 @@ var objects;
         };
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++
         Ocean.prototype._checkBounds = function () {
-            if (this.x === -640) {
+            if (this.x === -1280) {
                 this.reset();
             }
         };

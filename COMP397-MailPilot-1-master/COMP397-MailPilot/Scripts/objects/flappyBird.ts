@@ -1,12 +1,12 @@
 ﻿
 module objects {
     // SUBMARINE CLASS
-    export class Submarine extends createjs.Bitmap {
+    export class FlappyBird extends createjs.Bitmap {
         public width: number;
         public height: number;
         // CONSTRUCTOR
         constructor() {
-            super(assetLoader.getResult("submarine"));
+            super(assetLoader.getResult("flappyBird"));
 
             this.width = this.getBounds().width;
             this.height = this.getBounds().height;

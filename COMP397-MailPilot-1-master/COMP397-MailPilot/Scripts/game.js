@@ -7,10 +7,10 @@
 /// <reference path="constants.ts" />
 /// <reference path="objects/gameobject.ts" />
 /// <reference path="objects/scoreboard.ts" />
-/// <reference path="objects/submarine.ts" />
+/// <reference path="objects/flappyBird.ts" />
 /// <reference path="objects/treasure.ts" />
-/// <reference path="objects/shark.ts" />
-/// <reference path="objects/ocean.ts" />
+/// <reference path="objects/pipe.ts" />
+/// <reference path="objects/sky.ts" />
 /// <reference path="objects/button.ts" />
 /// <reference path="objects/label.ts" />
 /// <reference path="states/gameplay.ts" />
@@ -31,10 +31,10 @@ var gamePlay;
 var gameOver;
 var menu;
 var manifest = [
-    { id: "shark", src: "assets/images/shark.png" },
+    { id: "pipe", src: "assets/images/pipe.png" },
     { id: "treasure", src: "assets/images/treasure.png" },
-    { id: "ocean", src: "assets/images/lvl2Ocean.gif" },
-    { id: "submarine", src: "assets/images/submarine.png" },
+    { id: "sky", src: "assets/images/skyBackground.gif" },
+    { id: "flappyBird", src: "assets/images/flappyBird.png" },
     { id: "playButton", src: "assets/images/playButton.png" },
     { id: "tryAgainButton", src: "assets/images/tryAgainButton.png" },
     { id: "water", src: "assets/audio/water.mp3" },

@@ -1,9 +1,9 @@
 /// <reference path="../constants.ts" />
 /// <reference path="../objects/gameobject.ts" />
 /// <reference path="../objects/treasure.ts" />
-/// <reference path="../objects/ocean.ts" />
-/// <reference path="../objects/submarine.ts" />
-/// <reference path="../objects/shark.ts" />
+/// <reference path="../objects/sky.ts" />
+/// <reference path="../objects/flappyBird.ts" />
+/// <reference path="../objects/pipe.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/scoreboard.ts" />
@@ -17,8 +17,8 @@ var states;
             // Instantiate Game Container
             this.game = new createjs.Container();
             //Ocean object
-            this.ocean = new objects.Ocean();
-            this.game.addChild(this.ocean);
+            this.sky = new objects.Sky();
+            this.game.addChild(this.sky);
             //Game Over Label
             this.gameOverLabel = new objects.Label(320, 40, "GAME OVER");
             this.gameOverLabel.font = "60px Consolas";
@@ -43,7 +43,7 @@ var states;
         };
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         GameOver.prototype.update = function () {
-            this.ocean.update();
+            this.sky.update();
             if (this.tryAgain) {
                 this.game.removeAllChildren();
                 stage.removeChild(this.game);

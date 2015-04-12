@@ -6,33 +6,33 @@ var __extends = this.__extends || function (d, b) {
 };
 var objects;
 (function (objects) {
-    // SHARK CLASS
-    var Shark = (function (_super) {
-        __extends(Shark, _super);
+    // OCEAN CLASS
+    var Sky = (function (_super) {
+        __extends(Sky, _super);
         // CONSTRUCTOR
-        function Shark() {
-            _super.call(this, "shark");
-            this.sound = "hit";
-            this._dx = 10;
+        function Sky() {
+            _super.call(this, assetLoader.getResult("sky"));
+            // PUBLIC INSTANCE VARIABLES
+            this._dx = 5;
             this.reset();
         }
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
-        Shark.prototype.update = function () {
+        Sky.prototype.update = function () {
             this.x -= this._dx;
             this._checkBounds();
         };
-        Shark.prototype.reset = function () {
-            this.y = Math.floor(Math.random() * 120);
-            this.x = this.width * 12;
+        Sky.prototype.reset = function () {
+            this.y = 0;
+            this.x = 0;
         };
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++
-        Shark.prototype._checkBounds = function () {
-            if (-this.x >= (640 + this.width)) {
+        Sky.prototype._checkBounds = function () {
+            if (this.x === -1280) {
                 this.reset();
             }
         };
-        return Shark;
-    })(objects.GameObject);
-    objects.Shark = Shark;
+        return Sky;
+    })(createjs.Bitmap);
+    objects.Sky = Sky;
 })(objects || (objects = {}));
-//# sourceMappingURL=shark.js.map
+//# sourceMappingURL=sky.js.map

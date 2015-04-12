@@ -1,9 +1,9 @@
 ﻿/// <reference path="../constants.ts" />
 /// <reference path="../objects/gameobject.ts" />
 /// <reference path="../objects/treasure.ts" />
-/// <reference path="../objects/ocean.ts" />
-/// <reference path="../objects/submarine.ts" />
-/// <reference path="../objects/shark.ts" />
+/// <reference path="../objects/sky.ts" />
+/// <reference path="../objects/flappyBird.ts" />
+/// <reference path="../objects/pipe.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/label.ts" />
 
@@ -14,7 +14,7 @@ module states {
     export class GameOver {
         // Game Objects 
         public game: createjs.Container;
-        public ocean: objects.Ocean;
+        public sky: objects.Sky;
         public gameOverLabel: objects.Label;
         public finalScoreLabel: objects.Label;
         public highScoreLabel: objects.Label;
@@ -27,8 +27,8 @@ module states {
             this.game = new createjs.Container();
 
             //Ocean object
-            this.ocean = new objects.Ocean();
-            this.game.addChild(this.ocean);
+            this.sky = new objects.Sky();
+            this.game.addChild(this.sky);
 
             //Game Over Label
             this.gameOverLabel = new objects.Label(320, 40, "GAME OVER");
@@ -62,7 +62,7 @@ module states {
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public update() {
 
-            this.ocean.update();
+            this.sky.update();
 
             if (this.tryAgain) {
                 this.game.removeAllChildren();
