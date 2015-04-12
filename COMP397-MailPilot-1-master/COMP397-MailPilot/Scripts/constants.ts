@@ -8,6 +8,6 @@
     // Game Constants
     export var TREASURE_NUM: number = 3;
     export var LABEL_FONT = "40px Consolas";
-    export var LABEL_COLOUR = "#FFFF00";
+    export var LABEL_COLOUR = "#FFBF00";
     export var SUBMARINE_LIVES = 3;
 }  

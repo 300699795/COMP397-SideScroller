@@ -26,12 +26,12 @@ module states {
             // Instantiate Game Container
             this.game = new createjs.Container();
 
-            //Ocean object
+            //Sky object
             this.sky = new objects.Sky();
             this.game.addChild(this.sky);
 
             //Game Over Label
-            this.treasureHunter = new objects.Label(320, 40, "Easy Flappy Bird!");
+            this.treasureHunter = new objects.Label(320, 40, "FlapEZ Bird!");
             this.treasureHunter.font = "60px Consolas";
             this.treasureHunter.regX = this.treasureHunter.getMeasuredWidth() * 0.5;
             this.treasureHunter.regY = this.treasureHunter.getMeasuredLineHeight() * 0.5;

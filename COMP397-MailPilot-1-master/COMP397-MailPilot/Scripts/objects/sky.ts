@@ -1,5 +1,5 @@
 ﻿module objects {
-    // OCEAN CLASS
+    // SKY CLASS
     export class Sky extends createjs.Bitmap {
         // PUBLIC INSTANCE VARIABLES
         private _dx: number = 5;

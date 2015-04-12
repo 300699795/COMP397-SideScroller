@@ -13,13 +13,13 @@ var states;
             this.pipe = [];
             // Instantiate Game Container
             this.game = new createjs.Container();
-            //Ocean object
+            //Sky object
             this.sky = new objects.Sky();
             this.game.addChild(this.sky);
-            //Treasure object
+            //Coin object
             this.coin = new objects.Coin();
             this.game.addChild(this.coin);
-            //Submarine object
+            //flappy bird object
             this.flappyBird = new objects.FlappyBird();
             this.game.addChild(this.flappyBird);
             for (var pipe = 1; pipe >= 0; pipe--) {
@@ -49,7 +49,6 @@ var states;
                         }
                         if (collider.name == "treasure") {
                             this.scoreboard.score += 100;
-                            stage.removeChild(this.coin);
                         }
                     }
                     collider.isColliding = true;

@@ -37,8 +37,9 @@ var manifest = [
     { id: "flappyBird", src: "assets/images/flappyBird.png" },
     { id: "playButton", src: "assets/images/playButton.png" },
     { id: "tryAgainButton", src: "assets/images/tryAgainButton.png" },
-    { id: "water", src: "assets/audio/water.mp3" },
+    { id: "background", src: "assets/audio/background.mp3" },
     { id: "coin", src: "assets/audio/coin.mp3" },
+    { id: "gameover", src: "assets/audio/gameover.mp3" },
     { id: "hit", src: "assets/audio/hit.mp3" }
 ];
 function Preload() {

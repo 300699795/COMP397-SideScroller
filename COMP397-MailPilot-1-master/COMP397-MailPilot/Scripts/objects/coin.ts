@@ -1,5 +1,5 @@
 ﻿module objects {
-    // TREASURE CLASS
+    // COIN CLASS
     export class Coin extends objects.GameObject{
 
         // CONSTRUCTOR

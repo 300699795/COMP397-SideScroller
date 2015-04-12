@@ -23,20 +23,20 @@ module states {
             this.game = new createjs.Container();
 
 
-            //Ocean object
+            //Sky object
             this.sky = new objects.Sky();
             this.game.addChild(this.sky);
 
-            //Treasure object
+            //Coin object
             this.coin = new objects.Coin();
             this.game.addChild(this.coin);
 
 
-            //Submarine object
+            //flappy bird object
             this.flappyBird = new objects.FlappyBird();
             this.game.addChild(this.flappyBird);
 
-            //Shark object
+            //pipe object
             for (var pipe = 1; pipe >= 0; pipe--) {
                 this.pipe[pipe] = new objects.Pipe();
                 this.game.addChild(this.pipe[pipe]);
@@ -70,7 +70,8 @@ module states {
                         }
                         if (collider.name == "treasure") {
                             this.scoreboard.score += 100;
-                            stage.removeChild(this.coin);
+                            
+                            
                         }
                     }
                     collider.isColliding = true;
@@ -95,8 +96,9 @@ module states {
             }
 
             this.checkCollision(this.coin);
+            
 
-
+            
             this.scoreboard.update();
 
             if (this.scoreboard.score == 500) {

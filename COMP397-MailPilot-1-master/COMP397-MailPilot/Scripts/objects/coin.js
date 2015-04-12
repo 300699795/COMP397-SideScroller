@@ -6,7 +6,7 @@ var __extends = this.__extends || function (d, b) {
 };
 var objects;
 (function (objects) {
-    // TREASURE CLASS
+    // COIN CLASS
     var Coin = (function (_super) {
         __extends(Coin, _super);
         // CONSTRUCTOR

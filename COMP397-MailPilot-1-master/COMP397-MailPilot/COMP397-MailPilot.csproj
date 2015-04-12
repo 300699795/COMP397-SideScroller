@@ -59,18 +59,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\audio\background.mp3" />
     <Content Include="assets\audio\coin.mp3" />
+    <Content Include="assets\audio\gameover.mp3" />
     <Content Include="assets\audio\hit.mp3" />
-    <Content Include="assets\audio\metal.mp3" />
-    <Content Include="assets\audio\water.mp3" />
     <Content Include="assets\images\coin.png" />
     <Content Include="assets\images\flappyBird.png" />
     <Content Include="assets\images\pipe.png" />
     <Content Include="assets\images\playButton.png" />
-    <Content Include="assets\images\shark.png" />
     <Content Include="assets\images\skyBackground.gif" />
-    <Content Include="assets\images\submarine.png" />
-    <Content Include="assets\images\treasure.png" />
     <Content Include="assets\images\tryAgainButton.png" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">

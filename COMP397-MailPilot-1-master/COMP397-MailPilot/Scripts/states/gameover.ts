@@ -50,6 +50,7 @@ module states {
             this.tryAgainButton.on("click", this.tryAgainClicked, this);
 
             this.game.addChild(this.tryAgainButton);
+            createjs.Sound.play("gameover", { loop: -1 });
 
             // Add Game Container to Stage
             stage.addChild(this.game);

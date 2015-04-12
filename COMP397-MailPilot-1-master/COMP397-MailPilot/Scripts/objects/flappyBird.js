@@ -18,7 +18,7 @@ var objects;
             this.y = 430 * 0.5;
             this.regX = this.width * 0.5;
             this.regY = this.height * 0.5;
-            createjs.Sound.play("water", { loop: -1 });
+            createjs.Sound.play("background", { loop: -1 });
         }
         // PUBLIC METHODS
         FlappyBird.prototype.update = function () {

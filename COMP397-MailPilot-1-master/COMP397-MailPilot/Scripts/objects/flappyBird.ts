@@ -1,6 +1,6 @@
 ﻿
 module objects {
-    // SUBMARINE CLASS
+    // FLAPPY BIRD CLASS
     export class FlappyBird extends createjs.Bitmap {
         public width: number;
         public height: number;
@@ -15,7 +15,7 @@ module objects {
             this.y = 430 * 0.5;
             this.regX = this.width * 0.5;
             this.regY = this.height * 0.5;
-            createjs.Sound.play("water", {loop: -1});
+            createjs.Sound.play("background", {loop: -1});
         }
 
         // PUBLIC METHODS

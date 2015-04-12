@@ -1,5 +1,5 @@
 ﻿module objects {
-    // SHARK CLASS
+    // PIPE CLASS
     export class Pipe extends objects.GameObject {
 
         // CONSTRUCTOR
