@@ -1,6 +1,6 @@
 ﻿/// <reference path="../constants.ts" />
 /// <reference path="../objects/gameobject.ts" />
-/// <reference path="../objects/treasure.ts" />
+/// <reference path="../objects/coin.ts" />
 /// <reference path="../objects/sky.ts" />
 /// <reference path="../objects/flappyBird.ts" />
 /// <reference path="../objects/pipe.ts" />
@@ -14,7 +14,7 @@ module states {
         public game: createjs.Container;
         public scoreboard: objects.ScoreBoard;
         public flappyBird: objects.FlappyBird;
-        public treasure: objects.Treasure;
+        public coin: objects.Coin;
         public pipe: objects.Pipe[] = [];
         public sky: objects.Sky;
 
@@ -28,8 +28,8 @@ module states {
             this.game.addChild(this.sky);
 
             //Treasure object
-            this.treasure = new objects.Treasure();
-            this.game.addChild(this.treasure);
+            this.coin = new objects.Coin();
+            this.game.addChild(this.coin);
 
 
             //Submarine object
@@ -70,6 +70,7 @@ module states {
                         }
                         if (collider.name == "treasure") {
                             this.scoreboard.score += 100;
+                            stage.removeChild(this.coin);
                         }
                     }
                     collider.isColliding = true;
@@ -83,7 +84,7 @@ module states {
 
             this.sky.update();
 
-            this.treasure.update();
+            this.coin.update();
 
             this.flappyBird.update();
 
@@ -93,7 +94,7 @@ module states {
                 this.checkCollision(this.pipe[pipe]);
             }
 
-            this.checkCollision(this.treasure);
+            this.checkCollision(this.coin);
 
 
             this.scoreboard.update();

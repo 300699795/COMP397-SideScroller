@@ -1,6 +1,6 @@
 /// <reference path="../constants.ts" />
 /// <reference path="../objects/gameobject.ts" />
-/// <reference path="../objects/treasure.ts" />
+/// <reference path="../objects/coin.ts" />
 /// <reference path="../objects/sky.ts" />
 /// <reference path="../objects/flappyBird.ts" />
 /// <reference path="../objects/pipe.ts" />
@@ -17,8 +17,8 @@ var states;
             this.sky = new objects.Sky();
             this.game.addChild(this.sky);
             //Treasure object
-            this.treasure = new objects.Treasure();
-            this.game.addChild(this.treasure);
+            this.coin = new objects.Coin();
+            this.game.addChild(this.coin);
             //Submarine object
             this.flappyBird = new objects.FlappyBird();
             this.game.addChild(this.flappyBird);
@@ -49,6 +49,7 @@ var states;
                         }
                         if (collider.name == "treasure") {
                             this.scoreboard.score += 100;
+                            stage.removeChild(this.coin);
                         }
                     }
                     collider.isColliding = true;
@@ -60,13 +61,13 @@ var states;
         }; // checkCollision Method
         GamePlay.prototype.update = function () {
             this.sky.update();
-            this.treasure.update();
+            this.coin.update();
             this.flappyBird.update();
             for (var pipe = 1; pipe >= 0; pipe--) {
                 this.pipe[pipe].update();
                 this.checkCollision(this.pipe[pipe]);
             }
-            this.checkCollision(this.treasure);
+            this.checkCollision(this.coin);
             this.scoreboard.update();
             if (this.scoreboard.score == 500) {
                 currentState = constants.LVL2_STATE;

@@ -1,6 +1,6 @@
 /// <reference path="../constants.ts" />
 /// <reference path="../objects/gameobject.ts" />
-/// <reference path="../objects/treasure.ts" />
+/// <reference path="../objects/coin.ts" />
 /// <reference path="../objects/sky.ts" />
 /// <reference path="../objects/flappyBird.ts" />
 /// <reference path="../objects/pipe.ts" />

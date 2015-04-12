@@ -63,6 +63,7 @@
     <Content Include="assets\audio\hit.mp3" />
     <Content Include="assets\audio\metal.mp3" />
     <Content Include="assets\audio\water.mp3" />
+    <Content Include="assets\images\coin.png" />
     <Content Include="assets\images\flappyBird.png" />
     <Content Include="assets\images\pipe.png" />
     <Content Include="assets\images\playButton.png" />
@@ -100,7 +101,7 @@
     <TypeScriptCompile Include="Scripts\objects\label.ts" />
     <TypeScriptCompile Include="Scripts\objects\pipe.ts" />
     <TypeScriptCompile Include="Scripts\objects\gameobject.ts" />
-    <TypeScriptCompile Include="Scripts\objects\treasure.ts" />
+    <TypeScriptCompile Include="Scripts\objects\coin.ts" />
     <TypeScriptCompile Include="Scripts\objects\sky.ts" />
     <TypeScriptCompile Include="Scripts\objects\flappyBird.ts" />
     <TypeScriptCompile Include="Scripts\objects\scoreboard.ts" />

@@ -1,6 +1,6 @@
 /// <reference path="../constants.ts" />
 /// <reference path="../objects/gameobject.ts" />
-/// <reference path="../objects/treasure.ts" />
+/// <reference path="../objects/coin.ts" />
 /// <reference path="../objects/sky.ts" />
 /// <reference path="../objects/flappyBird.ts" />
 /// <reference path="../objects/pipe.ts" />
@@ -20,7 +20,7 @@ var states;
             this.sky = new objects.Sky();
             this.game.addChild(this.sky);
             //Game Over Label
-            this.treasureHunter = new objects.Label(320, 40, "Treasure Hunt!");
+            this.treasureHunter = new objects.Label(320, 40, "Easy Flappy Bird!");
             this.treasureHunter.font = "60px Consolas";
             this.treasureHunter.regX = this.treasureHunter.getMeasuredWidth() * 0.5;
             this.treasureHunter.regY = this.treasureHunter.getMeasuredLineHeight() * 0.5;

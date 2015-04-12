@@ -1,12 +1,12 @@
 ﻿module objects {
     // TREASURE CLASS
-    export class Treasure extends objects.GameObject{
+    export class Coin extends objects.GameObject{
 
         // CONSTRUCTOR
         constructor() {
             super("treasure");
             this.sound = "coin";
-            this._dx = 5;
+            this._dx = 15;
 
             this.reset();
         }

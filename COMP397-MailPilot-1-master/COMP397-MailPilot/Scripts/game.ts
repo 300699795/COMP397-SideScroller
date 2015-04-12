@@ -10,7 +10,7 @@
 /// <reference path="objects/gameobject.ts" />
 /// <reference path="objects/scoreboard.ts" />
 /// <reference path="objects/flappyBird.ts" />
-/// <reference path="objects/treasure.ts" />
+/// <reference path="objects/coin.ts" />
 /// <reference path="objects/pipe.ts" />
 /// <reference path="objects/sky.ts" />
 /// <reference path="objects/button.ts" />
@@ -41,7 +41,7 @@ var menu: states.Menu;
 
 var manifest = [
     { id: "pipe", src: "assets/images/pipe.png" },
-    { id: "treasure", src: "assets/images/treasure.png" },
+    { id: "treasure", src: "assets/images/coin.png" },
     { id: "sky", src: "assets/images/skyBackground.gif" },
     { id: "flappyBird", src: "assets/images/flappyBird.png" },
     { id: "playButton", src: "assets/images/playButton.png" },
