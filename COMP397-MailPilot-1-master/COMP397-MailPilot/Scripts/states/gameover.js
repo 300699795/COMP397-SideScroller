@@ -35,7 +35,7 @@ var states;
             this.tryAgainButton = new objects.Button(320, 280, "tryAgainButton");
             this.tryAgainButton.on("click", this.tryAgainClicked, this);
             this.game.addChild(this.tryAgainButton);
-            createjs.Sound.play("gameover", { loop: -1 });
+            createjs.Sound.play("gameover");
             // Add Game Container to Stage
             stage.addChild(this.game);
         } // Constructor
